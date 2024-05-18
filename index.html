@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Film Development & Scanning</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     body {
-      font-family: 'Courier New', monospace;
+      font-family: 'Press Start 2P', 'Courier New', monospace;
       background-color: #0000FF;
       color: #FFFFFF;
       margin: 0;
@@ -17,14 +19,33 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
+      animation: backgroundAnimation 10s infinite alternate;
     }
+
+    @keyframes backgroundAnimation {
+      0% { background-color: #0000FF; }
+      50% { background-color: #1E90FF; }
+      100% { background-color: #4169E1; }
+    }
+
     h1 {
       font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 3s;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     p {
       font-size: 1.5rem;
+      margin-bottom: 2rem;
+      animation: fadeIn 4s;
     }
-    a {
+
+    a.button {
       background-color: #FFFFFF;
       color: #0000FF;
       padding: 10px 20px;
@@ -33,7 +54,14 @@
       font-size: 1.2rem;
       margin-top: 20px;
       display: inline-block;
+      transition: background-color 0.3s, color 0.3s;
     }
+
+    a.button:hover {
+      background-color: #0000FF;
+      color: #FFFFFF;
+    }
+
     footer {
       position: fixed;
       bottom: 0;
@@ -41,18 +69,31 @@
       background-color: #007BFF;
       padding: 10px 0;
       text-align: center;
+      animation: slideUp 2s;
     }
+
+    @keyframes slideUp {
+      from { bottom: -50px; }
+      to { bottom: 0; }
+    }
+
     footer a {
       color: #FFFFFF;
       margin: 0 10px;
       text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #FFD700;
     }
   </style>
 </head>
 <body>
   <h1>Film Development & Scanning</h1>
   <p>High-quality services for just $16 per roll</p>
-  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YOUR_PAYPAL_BUTTON_ID">Purchase Now</a>
+  <!-- Replace YOUR_PAYPAL_LINK with the actual PayPal link -->
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YOUR_PAYPAL_BUTTON_ID" class="button">Purchase Now</a>
   <footer>
     <p>&copy; 2024 Film Development & Scanning</p>
     <a href="https://instagram.com/your_instagram" target="_blank">Instagram</a>
