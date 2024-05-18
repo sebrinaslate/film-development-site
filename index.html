@@ -9,7 +9,7 @@
 
     body {
       font-family: 'Press Start 2P', 'Courier New', monospace;
-      background-color: #0000FF;
+      background-color: #9370DB; /* Initial pastel purple */
       color: #FFFFFF;
       margin: 0;
       padding: 0;
@@ -19,13 +19,14 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
-      animation: backgroundAnimation 10s infinite alternate;
+      animation: backgroundAnimation 15s infinite alternate;
     }
 
     @keyframes backgroundAnimation {
-      0% { background-color: #0000FF; }
-      50% { background-color: #1E90FF; }
-      100% { background-color: #4169E1; }
+      0% { background-color: #9370DB; } /* pastel purple */
+      50% { background-color: #000080; } /* navy blue */
+      75% { background-color: #FF69B4; } /* pink */
+      100% { background-color: #9370DB; } /* back to pastel purple */
     }
 
     h1 {
@@ -115,7 +116,7 @@
 <body>
   <h1>Film Development & Scanning</h1>
   <p>High-quality services for just $16 per roll</p>
-  <p>Please mail all rolls to: <strong>---, Encinitas</strong></p>
+  <p>Please mail all rolls to: <strong> Road, Encinitas</strong></p>
   <a href="https://www.paypal.com/ncp/payment/JHL67HE6YXLU6" class="button">Purchase Now</a>
   <footer>
     <p>&copy; 2024 Film Development & Scanning</p>
